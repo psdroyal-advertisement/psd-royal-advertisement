@@ -91,6 +91,32 @@ footer a { color: var(--gold); }
   h1 { font-size: 34px; }
   form { padding: 18px; }
 }
+
+/* Human-centred studio imagery */
+.hero-layout { display:grid; grid-template-columns:1.05fr .95fr; gap:42px; align-items:center; }
+.hero-photo-wrap { position:relative; min-width:0; }
+.hero-photo { display:block; width:100%; height:410px; object-fit:cover; border:1px solid var(--line); border-radius:3px; filter:saturate(.82); }
+.photo-note { font-size:11px; color:#aaa; margin-top:9px; }
+.photo-frame { position:absolute; inset:14px -14px -14px 14px; border:1px solid rgba(214,179,106,.45); z-index:0; pointer-events:none; }
+.hero-photo { position:relative; z-index:1; }
+.human-section { background:#0b0b0b; }
+.human-intro { max-width:760px; margin-bottom:30px; }
+.human-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.human-card { overflow:hidden; border:1px solid var(--line); background:#121212; }
+.human-card img { display:block; width:100%; height:225px; object-fit:cover; }
+.human-card-copy { padding:20px; }
+.human-card-copy h3 { margin:0 0 8px; }
+.human-card-copy p { color:var(--muted); font-size:14px; margin:0; }
+.image-process { display:grid; grid-template-columns:.95fr 1.05fr; gap:34px; align-items:center; }
+.image-process img { width:100%; height:330px; object-fit:cover; display:block; border:1px solid var(--line); }
+.image-process .hint { font-size:14px; line-height:1.8; }
+.payment-section { background:linear-gradient(120deg,#19150d,#080808 60%,#1b160b); border-top:1px solid var(--line); border-bottom:1px solid var(--line); text-align:center; }
+.payment-inner { max-width:740px; margin:auto; }
+.payment-inner p { color:#d2cfc8; }
+.payment-inner .btn { margin-top:12px; min-width:190px; }
+@media(max-width:820px) { .hero-layout,.image-process { grid-template-columns:1fr; } .hero { padding:55px 0; } .hero-photo { height:330px; } .human-grid { grid-template-columns:1fr 1fr; } }
+@media(max-width:520px) { .human-grid { grid-template-columns:1fr; } .human-card img { height:230px; } .photo-frame { inset:8px -8px -8px 8px; } .hero-photo { height:260px; } }
+
 </style>
 </head>
 <body>
@@ -102,7 +128,9 @@ footer a { color: var(--gold); }
       <a href="#services">Services</a>
       <a href="#pricing">Packages & Prices</a>
       <a href="#process">How It Works</a>
+      <a href="#human-work">Behind the Work</a>
       <a href="#about">Our Approach</a>
+      <a href="#pay-now">Pay Now</a>
       <a href="https://www.instagram.com/psdroyal.advertisement/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
       <a href="https://www.tiktok.com/@psdroyaladvertisement" target="_blank" rel="noopener noreferrer">TikTok ↗</a>
       <a href="#enquiry" class="gold">Start a Project ↗</a>
@@ -111,13 +139,21 @@ footer a { color: var(--gold); }
 </header>
 <main>
 <section class="hero" id="home">
-  <div class="container">
-    <div class="eyebrow">Strategy. Storytelling. Cinematic Advertising.</div>
-    <h1>Your Business Deserves to Be <span class="gold">Seen Differently.</span></h1>
-    <p class="lead">You provide the photos and business information. We transform them into thoughtful, cinematic advertisements designed to capture attention, communicate value and make your brand memorable.</p>
-    <div class="actions">
-      <a class="btn" href="#enquiry">Let's Create Your Advertisement ↗</a>
-      <a class="btn btn-outline" href="#process">Discover Our Process</a>
+  <div class="container hero-layout">
+    <div>
+      <div class="eyebrow">Strategy. Storytelling. Human Creativity.</div>
+      <h1>Your Business Deserves to Be <span class="gold">Seen Differently.</span></h1>
+      <p class="lead">You bring your business story, logo and photos. We bring research, creative thinking and careful production to shape a cinematic advertisement around what makes your brand matter.</p>
+      <div class="actions">
+        <a class="btn" href="#enquiry">Let's Create Your Advertisement ↗</a>
+        <a class="btn btn-outline" href="#human-work">Meet Our Approach</a>
+      </div>
+      <p class="hint" style="margin-top:18px;max-width:540px">Thoughtful people. Intentional creative decisions. Technology used with purpose.</p>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="photo-frame" aria-hidden="true"></div>
+      <img class="hero-photo" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85" alt="Creative professionals collaborating around a table on a project" fetchpriority="high">
+      <p class="photo-note">Illustrative studio imagery — we will replace this with genuine PSD Royal behind-the-scenes photographs as they become available.</p>
     </div>
   </div>
 </section>
@@ -133,6 +169,30 @@ footer a { color: var(--gold); }
       <article class="card"><div class="number">05 / SOCIAL</div><h3>Short-Form Video Content</h3><p>Vertical and horizontal options planned for your platform.</p></article>
       <article class="card"><div class="number">06 / PARTNERSHIP</div><h3>Made Around Your Brand</h3><p>We shape direction around your business, not same formula.</p></article>
     </div>
+  </div>
+</section>
+<section class="human-section" id="human-work">
+  <div class="container">
+    <div class="human-intro">
+      <div class="eyebrow">The People Behind the Process</div>
+      <h2>Good Advertising Takes <span class="gold">Thought, Care and Teamwork.</span></h2>
+      <p class="lead">A strong advertisement is not an accident. It takes people who ask the right questions, explore the business, shape the story and check the details before a client sees the final work.</p>
+    </div>
+    <div class="human-grid">
+      <article class="human-card">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Creative professional researching a client brief and organising ideas for an advertisement" loading="eager" fetchpriority="high" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1455390582262-044c5506a8e9?auto=format&fit=crop&w=900&q=80'">
+        <div class="human-card-copy"><h3>We Listen & Research</h3><p>We learn about your business, audience, goals and the feeling you want customers to associate with your brand.</p></div>
+      </article>
+      <article class="human-card">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="Team members sharing ideas during a creative planning meeting" loading="lazy">
+        <div class="human-card-copy"><h3>We Develop the Direction</h3><p>We turn information into a considered creative concept, with a clear message and a reason for each scene.</p></div>
+      </article>
+      <article class="human-card">
+        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=900&q=80" alt="Video production workspace with screens and editing equipment" loading="lazy">
+        <div class="human-card-copy"><h3>We Refine the Details</h3><p>We shape pacing, visuals and presentation, then review the work against the agreed brief before delivery.</p></div>
+      </article>
+    </div>
+    <p class="photo-note">These are illustrative stock photographs showing the kind of work involved, not photographs of named PSD Royal employees.</p>
   </div>
 </section>
 <div class="promo-banner"><div class="container">CHRISTMAS ADVERTISING PROMOTION <span class="gold">✦</span> Premium storytelling. Special seasonal prices. <a href="#pricing" class="gold"><strong>Explore packages ↗</strong></a></div></div>
@@ -160,6 +220,15 @@ footer a { color: var(--gold); }
       <div class="step"><strong>STEP 02</strong><h3>Research & Direction</h3><p class="hint">We review brief and develop direction.</p></div>
       <div class="step"><strong>STEP 03</strong><h3>Production & Review</h3><p class="hint">After scope agreed, we create and share review.</p></div>
       <div class="step"><strong>STEP 04</strong><h3>Approval & Delivery</h3><p class="hint">Apply revisions and deliver final files.</p></div>
+    </div>
+    <div class="image-process" style="margin-top:48px">
+      <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85" alt="Calm professional workspace prepared for planning and creative work" loading="lazy">
+      <div>
+        <div class="eyebrow">Before Production Begins</div>
+        <h2>Every Project Starts With <span class="gold">A Plan.</span></h2>
+        <p class="hint">We review the information you share, identify the audience and intended customer feeling, and develop a Creative Blueprint. You can review the proposed direction before video production begins.</p>
+        <a class="btn btn-outline" href="#enquiry">Discuss Your Project ↗</a>
+      </div>
     </div>
   </div>
 </section>
@@ -221,158 +290,26 @@ footer a { color: var(--gold); }
   </div>
 </section>
 </main>
-
-
-<!-- PSD Royal Advertisement: Pay Now Section -->
-<section class="payment-section">
-  <div class="payment-content">
-    <p class="payment-label">LET'S CREATE SOMETHING EXTRAORDINARY</p>
-
-    <h2>Ready to Elevate Your Brand?</h2>
-
-    <p>
-      Take the next step towards a captivating advertisement
-      for your business. Click below to proceed to our
-      secure Paystack payment page.
-    </p>
-
-    <a
-      class="paystack-button"
-      href="https://paystack.shop/pay/psd-royal"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      PAY NOW <span aria-hidden="true">→</span>
-    </a>
-
-    <p class="payment-note">
-      Payments are processed through Paystack.
-      Please confirm your agreed service and price before paying.
-    </p>
+<section class="payment-section" id="pay-now">
+  <div class="container payment-inner">
+    <div class="eyebrow">Your Next Step</div>
+    <h2>Ready to Bring Your <span class="gold">Brand Story to Life?</span></h2>
+    <p>Once we have confirmed your package, deliverables and price, you can pay securely through our Paystack payment page.</p>
+    <a class="btn" href="https://paystack.shop/pay/psd-royal" target="_blank" rel="noopener noreferrer">PAY NOW ↗</a>
+    <p class="photo-note">Please confirm your agreed package and amount with PSD Royal before making payment.</p>
   </div>
 </section>
-
-<style>
-  .payment-section {
-    background: #080808;
-    color: #ffffff;
-    padding: 55px 20px;
-    text-align: center;
-    border-top: 1px solid #b99550;
-    border-bottom: 1px solid #b99550;
-  }
-
-  .payment-content {
-    max-width: 650px;
-    margin: 0 auto;
-  }
-
-  .payment-label {
-    color: #d6b36a;
-    font-size: 12px;
-    letter-spacing: 2px;
-    font-weight: bold;
-  }
-
-  .payment-section h2 {
-    color: #e0bd76;
-    font-size: clamp(25px, 5vw, 38px);
-    margin: 18px 0;
-  }
-
-  .payment-section p {
-    line-height: 1.8;
-  }
-
-  .paystack-button {
-    display: inline-block;
-    margin: 22px 0 10px;
-    padding: 16px 38px;
-    background: linear-gradient(135deg, #f0d99d, #c39a49);
-    color: #080808;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    letter-spacing: 1px;
-    transition: transform 0.2s ease;
-  }
-
-  .paystack-button:hover {
-    transform: translateY(-2px);
-  }
-
-  .payment-note {
-    color: #c5c0b6;
-    font-size: 12px;
-  }
-</style>
-  
 <footer>
   <div class="container footer-row">
-
+    <div><strong>PSD ROYAL ADVERTISEMENT</strong><div class="hint">Expanding Your Reach.</div><div class="hint">Cinematic advertising.</div></div>
     <div>
-      <strong>PSD ROYAL ADVERTISEMENT</strong>
-      <div class="hint">Expanding Your Reach.</div>
-      <div class="hint">Cinematic advertising.</div>
-
-      <div style="margin-top:18px;">
-        <strong class="gold">Website Policies</strong>
-        <div>
-          <a href="terms-of-service.html">
-            Terms of Service
-          </a>
-        </div>
-        <div>
-          <a href="privacy-policy.html">
-            Privacy Policy
-          </a>
-        </div>
-      </div>
+      <div>Email: <a href="mailto:psdroyalads@gmail.com">psdroyalads@gmail.com</a></div>
+      <div>Call: <a href="tel:+233245414888">+233 245 414888</a> / <a href="tel:+233201173076">+233 201 173076</a></div>
+      <div>WhatsApp: <a href="https://wa.me/233201173076">+233 201 173076</a></div>
+      <div>Instagram: <a href="https://www.instagram.com/psdroyal.advertisement/" target="_blank" rel="noopener noreferrer">@psdroyal.advertisement ↗</a></div>
+      <div>TikTok: <a href="https://www.tiktok.com/@psdroyaladvertisement" target="_blank" rel="noopener noreferrer">@psdroyaladvertisement ↗</a></div>
+      <div class="hint">© <span id="year"></span> PSD Royal Advertisement</div>
     </div>
-
-    <div>
-      <div>
-        Email:
-        <a href="mailto:psdroyalads@gmail.com">
-          psdroyalads@gmail.com
-        </a>
-      </div>
-
-      <div>
-        Call:
-        <a href="tel:+233245414888">+233 245 414888</a>
-        /
-        <a href="tel:+233201173076">+233 201 173076</a>
-      </div>
-
-      <div>
-        WhatsApp:
-        <a href="https://wa.me/233201173076">
-          +233 201 173076
-        </a>
-      </div>
-
-      <div>
-        Instagram:
-        <a href="https://www.instagram.com/psdroyal.advertisement/"
-           target="_blank" rel="noopener noreferrer">
-          @psdroyal.advertisement ↗
-        </a>
-      </div>
-
-      <div>
-        TikTok:
-        <a href="https://www.tiktok.com/@psdroyaladvertisement"
-           target="_blank" rel="noopener noreferrer">
-          @psdroyaladvertisement ↗
-        </a>
-      </div>
-
-      <div class="hint">
-        © <span id="year"></span> PSD Royal Advertisement
-      </div>
-    </div>
-
   </div>
 </footer>
 <script>
